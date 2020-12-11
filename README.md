@@ -495,7 +495,7 @@ programming. However, many new Emacs users often ask how to customize
 the user interface to add a good color scheme and make it look minimal,
 so this section indulges a little in customizing the user interface. The
 actual Common Lisp related customization begins in the next section:
-[Parentheses Highlighting](#parentheses-highlighting).
+[Highlight Parentheses](#highlight-parentheses).
 
 Here is a line-by-line explanation of the UI tweaks in [`.emacs`]:
 

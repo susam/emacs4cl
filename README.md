@@ -163,14 +163,15 @@ steps to get started:
 
     In the Emacs world (and elsewhere too), the prefix `M-` denotes the
     meta modifier key. It does not exist on most modern keyboards. Use
-    <kbd>alt</kbd>/<kbd>option</kbd> as a modifier key or
-    <kbd>esc</kbd> as a prefix key to enter `M-`.
+    the <kbd>alt</kbd> key or the <kbd>option</kbd> key as a modifier
+    key or <kbd>esc</kbd> as a prefix key to enter `M-`.
 
-    For example `M-x` is going to be <kbd>alt</kbd><kbd>x</kbd> or
-    <kbd>option</kbd><kbd>x</kbd> or <kbd>esc</kbd><kbd>x</kbd> on a
+    For example `M-x` is going to be <kbd>alt</kbd> + <kbd>x</kbd> or
+    <kbd>option</kbd> + <kbd>x</kbd> or <kbd>esc</kbd> <kbd>x</kbd> on a
     modern keyboard.
 
-    Similarly, `RET` denotes the <kbd>enter</kbd>/<kbd>return</kbd> key.
+    Similarly, `RET` denotes the <kbd>enter</kbd> key or the
+    <kbd>return</kbd> key.
 
  5. After SLIME REPL starts, enter the following expression at the
     `CL-USER>` prompt and press <kbd>enter</kbd>.
@@ -216,7 +217,7 @@ resources to learn Emacs. Perform the following steps to get started:
 
     Note that in the Emacs world (and elsewhere too), the
     notation `C-` denotes the <kbd>ctrl</kbd> modifier key. Thus `C-x`
-    denotes <kbd>ctrl</kbd><kbd>x</kbd>.
+    denotes <kbd>ctrl</kbd> + <kbd>x</kbd>.
 
     The notation `RET` denotes the <kbd>enter</kbd> or <kbd>return</kbd>
     key.
@@ -240,11 +241,11 @@ resources to learn Emacs. Perform the following steps to get started:
 
     Remember from the previous section that `M-` denotes the meta
     modifier key. The above command can be typed with
-    <kbd>alt</kbd>+<kbd>b</kbd> or <kbd>option</kbd>+<kbd>b</kbd> or
-    <kbd>esc</kbd><kbd>b</kbd>.
+    <kbd>alt</kbd> + <kbd>b</kbd> or <kbd>option</kbd> + <kbd>b</kbd> or
+    <kbd>esc</kbd> <kbd>b</kbd>.
 
-    If you face any issue with the <kbd>alt</kbd> or <kbd>option</kbd>
-    key, read [Emacs Wiki: Meta Key
+    If you face any issue with the <kbd>alt</kbd> key or the
+    <kbd>option</kbd> key, read [Emacs Wiki: Meta Key
     Problems](https://www.emacswiki.org/emacs/MetaKeyProblems).
 
  5. Now move forward by one word with the following:
@@ -322,8 +323,8 @@ started with it:
     M-x slime RET
     ```
 
-    Remember that `M-x` translates to <kbd>alt</kbd><kbd>x</kbd> or
-    <kbd>esc</kbd><kbd>x</kbd> on your keyboard.
+    Remember that `M-x` translates to <kbd>alt</kbd> + <kbd>x</kbd> or
+    <kbd>esc</kbd> <kbd>x</kbd> on a modern keyboard.
 
  3. A new buffer named `*slime-repl sbcl*` should have now appeared with
     the following prompt:
@@ -805,8 +806,8 @@ packages from the `dolist` expression of [`.emacs`].
     SLIME REPL. Paredit should automatically insert the corresponding
     `)`.
 
-  - When we press <kbd>backspace</kbd>/<kbd>delete</kbd> key, to delete
-    a parenthesis in the SLIME REPL, Paredit fails to keep the
+  - When we press the <kbd>backspace</kbd> key or <kbd>delete</kbd> key
+    to delete a parenthesis in the SLIME REPL, Paredit fails to keep the
     parentheses balanced because SLIME interferes with Paredit by
     grabbing the delete key. To fix this issue, use the following code:
 
@@ -822,7 +823,7 @@ packages from the `dolist` expression of [`.emacs`].
     automatically inserted, type them out to advance the cursor to the
     end of the line. When you type `)` even if it is already present,
     Paredit just skips over the already present `)`. Once you are at
-    the end of the line, press <kbd>backspace</kbd>/<kbd>delete</kbd>
+    the end of the line, press <kbd>backspace</kbd> or <kbd>delete</kbd>
     multiple times. Paredit will keep the parentheses balanced at all
     times.
 

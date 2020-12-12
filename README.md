@@ -56,8 +56,8 @@ these questions, then this project is for you.
 
 The [`.emacs`] file in this project provides you a quick way to get
 started with setting up your development environment. This document
-explains how to do in a step-by-step manner. This document also explains
-what is in the [`.emacs`] file in a line-by-line manner.
+explains how to do so in a step-by-step manner. This document also
+explains the content of [`.emacs`] file in a line-by-line manner.
 
 [pcl]: http://www.gigamonkeys.com/book/
 [clc]: https://lispcookbook.github.io/cl-cookbook/
@@ -90,7 +90,7 @@ useful tools already.
 
 Also, Portacle is still Emacs. To use Portacle effectively, you have to
 learn Emacs and SLIME anyway. If you are going to learn Emacs and SLIME
-anyway, you might as well set to it up yourself. Then you can add only
+anyway, you might as well set it up yourself. Then you can add only
 those customizations to Emacs that you need instead of Portacle deciding
 what your Emacs experience should be like.
 
@@ -193,10 +193,10 @@ Step-by-Step Usage
 ### Use Emacs
 
 Emacs is a very powerful and extensible editor. It comes with over
-10,000 built-in commands. A small subsection like this can barely
-scratch the surface of Emacs. Yet, this subsection makes a modest
-attempt at getting you started with Emacs and then provides more
-resources to learn Emacs. Perform the following steps to get started:
+10,000 built-in commands. A small section like this can barely scratch
+the surface of Emacs. Yet, this section makes a modest attempt at
+getting you started with Emacs and then provides more resources to learn
+further. Perform the following steps to get started:
 
  1. Start Emacs:
 
@@ -204,7 +204,7 @@ resources to learn Emacs. Perform the following steps to get started:
     emacs
     ```
 
- 2. Within Emacs, enter the following command to open file, say,
+ 2. Within Emacs, enter the following command to open a file, say,
     `~/hello.txt`:
 
     ```
@@ -292,12 +292,12 @@ them. The fingers do what the mind wants effortlessly due to muscle
 memory.
 
 While you are getting used to the Emacs key-bindings, keep this [GNU
-Emacs Reference Card][emacs-ref] handy with you. Also, if you are using
-it in GUI mode, then the menu options can be quite helpful. The menu
-options contain frequently used operations. The option for each
-operation also displays the key-bindings that can be used to invoke the
-same operation. Also, bookmark the [GNU Emacs Manual][emacs-doc] and
-refer to it when you need it.
+Emacs Reference Card][emacs-ref] handy. Also, if you are using it in GUI
+mode, then the menu options can be quite helpful. The menu options
+contain frequently used operations. The option for each operation also
+displays the key-bindings that can be used to invoke the same operation.
+Also, bookmark the [GNU Emacs Manual][emacs-doc] and refer to it when
+you need it.
 
 [emacs-doc]: https://www.gnu.org/software/emacs/manual/html_node/emacs/index.html
 [emacs-ref]: https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf
@@ -383,7 +383,7 @@ Quick Reference Card][slime-ref] handy.
 ### Use Paredit
 
 Paredit helps in keeping parentheses balanced and also in performing
-structured ediging of S-expressions in Lisp code. It provides a powerful
+structured editing of S-expressions in Lisp code. It provides a powerful
 set of commands to manipulate S-expressions in various ways. Perform the
 following steps to get started with Paredit:
 
@@ -431,8 +431,8 @@ following steps to get started with Paredit:
     in fact, a very nifty feature of Paredit. We can enter code with the
     same keystrokes as we would without Paredit.
 
- 5. Now press <code>enter</code> create a new line just before the last
-    parenthesis. A newline is inserted like this:
+ 5. Now press <code>enter</code> to create a new line just before the
+    last parenthesis. A newline is inserted like this:
 
     ```lisp
     (defun square (x)

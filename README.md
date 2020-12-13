@@ -493,7 +493,7 @@ This section explains the [`.emacs`] file provided here line-by-line.
 
 ### Tweak UI
 
-The first few lines in our [`.emacs`] merely tweaks the Emacs user
+The first few lines in our [`.emacs`] merely tweak the Emacs user
 interface. These are of course not essential for Common Lisp
 programming. However, many new Emacs users often ask how to customize
 the user interface to add a good color scheme and make it look minimal,

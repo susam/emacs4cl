@@ -597,6 +597,20 @@ This section is essential to Common Lisp programming with Emacs. The
 following points describe how we automate the installation of Emacs
 packages we need:
 
+  - The following code disables TLS 1.3 to work around a known bug in
+    GNU Emacs versions 26.1 and 26.2:
+
+    ```elisp
+    (if (and (version< emacs-version "26.3") (>= libgnutls-version 30603))
+        (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3"))
+    ```
+
+    See https://debbugs.gnu.org/34341 for more details on the bug. This
+    code is not required while using GNU Emacs version 26.3 or 27.1 or a
+    later version although leaving this code intact should do no harm
+    because this code checks whether the Emacs version is less than 26.3
+    before applying the workaround.
+
   - This is necessary for defining the `package-archives` list we will
     use in the next point.
 

@@ -31,6 +31,7 @@ Contents
 * [What About Portacle?](#what-about-portacle)
 * [Get Started](#get-started)
 * [Step-by-Step Usage](#step-by-step-usage)
+  * [Use SBCL](#use-sbcl)
   * [Use Emacs](#use-emacs)
   * [Use SLIME](#use-slime)
   * [Use Paredit](#use-paredit)
@@ -81,10 +82,11 @@ experienced Emacs user:
   - A default `*scratch*` buffer with more than 10 lines of comments
     that consume some valuable screen real-estate.
 
-  - Enabling line numbers in all buffers including the SLIME REPL
-    buffer. Enabling line numbers in Emacs is considered to be an
-    antipattern by some experienced Emacs users. See the [Opinion
-    References](#opinion-references) section for more details on this.
+  - Enabling line numbers in all buffers including the SLIME
+    Read-Eval-Print Loop (REPL) buffer. Enabling line numbers in Emacs
+    is considered to be an antipattern by some experienced Emacs users.
+    See the [Opinion References](#opinion-references) section for more
+    details on this.
 
 More importantly, installing Portacle hides away the underlying details
 of what goes into making Emacs ready for Common Lisp development.
@@ -193,6 +195,65 @@ to use this environment in more detail.
 
 Step-by-Step Usage
 ------------------
+
+### Use SBCL
+
+Steel Bank Common Lisp (SBCL) is a high performance Common Lisp
+compiler. It runs on several Unix and Unix-like systems such as Linux,
+FreeBSD, macOS, etc. It also runs experimentally on Windows. It is the
+most popular free and open source implementation of Common Lisp as of
+December 2020. See the [Opinion References](#opinion-references) section
+for survey results related to this.
+
+The steps provided below show how to run SBCL independently. This is not
+a typical way to run SBCL because most of the time we interact with SBCL
+via SLIME right from within Emacs. However running it independently once
+helps one appreciate that it is an independent program that compiles and
+executes Common Lisp code. Here are the steps:
+
+ 1. Open your favourite editor, type this code, and save it as
+    `hello.lisp`:
+
+    ```lisp
+    (format t "hello, world~%")
+    ```
+
+ 2. Then enter this command in the shell to run the program:
+
+    ```sh
+    sbcl --script hello.lisp
+    ```
+
+ 3. Now start the SBCL Read-Eval-Print Loop (REPL) with the following
+    command in the shell:
+
+    ```sh
+    sbcl
+    ```
+
+ 4. An asterisk prompt appears. Enter a Common Lisp expression at the
+    asterisk prompt like this and press <kbd>enter</kbd>:
+
+    ```lisp
+    (+ 1 2)
+    ```
+
+    The result should appear as the output.
+
+ 5. Similarly, enter the following expression at the SBCL prompt and
+    press <kbd>enter</kbd>:
+
+    ```lisp
+    (format t "hello, world~%")
+    ```
+
+ 6. Finally, enter the following expression and press <kbd>enter</kbd>
+    to exit the SBCL REPL:
+
+    ```lisp
+    (exit)
+    ```
+
 
 ### Use Emacs
 
@@ -909,11 +970,13 @@ more details.
 Opinion References
 ------------------
 
+- [State of Common Lisp Survey 2020][cl-survey-2020]
 - [Displaying line numbers is an Emacs anti-pattern][ln-anti-pattern]
 - [Give paredit mode a chance][paredit-chance]
 - [Never warmed up to paredit][paredit-never-warmed]
 - [Coloring each paren differently only adds noise][rainbow-noise]
 
+[cl-survey-2020]: https://docs.google.com/forms/d/e/1FAIpQLSfg7UJRKrkI3OjOHWL4xI-murE4LpQjIxsiAhFdPEmtyLX3kg/viewanalytics
 [ln-anti-pattern]: https://lobste.rs/s/vgjknq/emacs_begin_learning_common_lisp#c_su9qz9
 [paredit-chance]: https://stackoverflow.com/a/5243421/303363
 [paredit-never-warmed]: https://lobste.rs/s/vgjknq/emacs_begin_learning_common_lisp#c_0y6zpd

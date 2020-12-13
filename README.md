@@ -10,7 +10,13 @@ This repository provides a good middle ground between configuring Emacs
 manually by installing SLIME, Paredit, etc. yourself with `M-x
 package-install` commands and installing Portacle. It promotes a
 do-it-yourself approach to automate customizing Emacs for Common Lisp
-programming.
+programming. Here is how the development environment is going to look
+like:
+
+<p align="center">
+<a href="https://i.imgur.com/h7u8WAr.png"><img alt="Screenshot of Emacs and SLIME"
+    src="https://i.imgur.com/h7u8WAr.png" width="580"></a>
+</p>
 
 If you are already comfortable with Emacs and only want to understand
 what is in the [`.emacs`] file, you can skip ahead directly to the

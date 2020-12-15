@@ -663,8 +663,8 @@ packages we need:
     GNU Emacs versions 26.1 and 26.2:
 
     ```elisp
-    (if (and (version< emacs-version "26.3") (>= libgnutls-version 30603))
-        (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3"))
+    (when (and (version< emacs-version "26.3") (>= libgnutls-version 30603))
+      (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3"))
     ```
 
     See https://debbugs.gnu.org/34341 for more details on the bug. This

@@ -568,7 +568,7 @@ Here is a line-by-line explanation of the UI tweaks in [`.emacs`]:
   - Hide the menu bar:
 
     ```elisp
-    (menu-bar-mode -1)
+    (menu-bar-mode 0)
     ```
 
     When Emacs runs in a GUI window, by default, starts with a menu bar,
@@ -586,7 +586,7 @@ Here is a line-by-line explanation of the UI tweaks in [`.emacs`]:
   - Hide the tool bar:
 
     ```elisp
-    (tool-bar-mode -1)
+    (tool-bar-mode 0)
     ```
 
     Note that this is only an author's preference. You may comment out
@@ -595,7 +595,7 @@ Here is a line-by-line explanation of the UI tweaks in [`.emacs`]:
   - Hide the scroll bar:
 
     ```elisp
-    (scroll-bar-mode -1)
+    (scroll-bar-mode 0)
     ```
 
     Note that this is only an author's preference. You may comment out

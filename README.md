@@ -583,23 +583,24 @@ Here is a line-by-line explanation of the UI tweaks in [`.emacs`]:
     it out by inserting a semicolon (i.e., `;`) before the opening
     parentheses.
 
-  - Hide the tool bar:
+  - Hide the tool bar and scroll bar:
 
     ```elisp
-    (tool-bar-mode 0)
+    (when (display-graphic-p)
+      (tool-bar-mode 0)
+      (scroll-bar-mode 0))
     ```
 
-    Note that this is only an author's preference. You may comment out
-    this line out if you want to retain the tool bar.
-
-  - Hide the scroll bar:
-
-    ```elisp
-    (scroll-bar-mode 0)
-    ```
+    The `when` expression checks if Emacs is running with graphic
+    display before disabling the tool bar and scroll bar. Without the
+    `when` expression, we get the following error on Emacs without
+    graphic display support: `Symbol's function definition is void:
+    tool-bar-mode`. An example of Emacs without graphics support is
+    `emacs-nox` on Debian 10.
 
     Note that this is only an author's preference. You may comment out
-    this line out if you want to retain the tool bar.
+    one or more of these lines if you want to retain the tool bar or
+    scroll bar.
 
   - Inhibit the startup screen with the `Welcome to GNU Emacs` message
     from appearing:

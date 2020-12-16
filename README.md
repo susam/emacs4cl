@@ -6,6 +6,16 @@ for Common Lisp programming. This document provides a detailed
 description of how to set it up and get started with Common Lisp
 programming.
 
+[![View Source][Source SVG]][Source URL]
+[![MIT License][License SVG]][L]
+[![Twitter][Twitter SVG]][Twitter URL]
+
+[Source SVG]: https://img.shields.io/badge/view-~%2f.emacs-brightgreen
+[Source URL]: .emacs
+[License SVG]: https://img.shields.io/badge/license-MIT-%233ea639
+[Twitter SVG]: https://img.shields.io/badge/twitter-%40susam-%231da1f2
+[Twitter URL]: https://twitter.com/susam
+
 This repository provides a good middle ground between configuring Emacs
 manually by installing SLIME, Paredit, etc. yourself with `M-x
 package-install` commands and installing Portacle. It promotes a
@@ -998,6 +1008,9 @@ seeking help regarding this project:
 Although these community forums are focussed on mathematics and computer
 science, many members of these forums are very experienced in both Emacs
 and Common Lisp.
+
+Also, please feel free to [connect with me on Twitter][Twitter URL] and
+share your feedback, questions, and ideas with me.
 
 
 License

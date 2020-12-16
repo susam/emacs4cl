@@ -200,6 +200,19 @@ steps to get started:
     If the output `"hello, world"` appears in SLIME REPL, the
     development environment setup is complete.
 
+ 6. Optionally, install Quicklisp with the following commands:
+
+    ```sh
+    sbcl --load quicklisp.lisp --eval '(quicklisp-quickstart:install)' --quit
+    sbcl --load ~/quicklisp/setup.lisp --eval '(ql:add-to-init-file)' --quit
+    ```
+
+    Note that this is an optional step if you are just about to begin
+    learning Common Lisp. However, as you start using Common Lisp for
+    serious software development, sooner or later you are going to need
+    Quicklisp in order to install Common Lisp libraries available on
+    Quicklisp.
+
 Now that your environment is setup, read the next section to learn how
 to use this environment in more detail.
 

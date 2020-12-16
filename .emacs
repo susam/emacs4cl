@@ -1,3 +1,5 @@
+;;; Emacs4CL 0.1.0 <https://git.io/emacs4cl>
+
 ;; Customize user interface.
 (menu-bar-mode 0)
 (when (display-graphic-p)

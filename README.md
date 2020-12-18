@@ -47,6 +47,7 @@ Contents
   * [Use SLIME](#use-slime)
   * [Use Paredit](#use-paredit)
   * [Use Rainbow Delimiters](#use-rainbow-delimiters)
+  * [Use Quicklisp](#use-quicklisp)
 * [Line-by-Line Explanation](#line-by-line-explanation)
   * [Tweak UI](#tweak-ui)
   * [Highlight Parentheses](#highlight-parentheses)
@@ -203,15 +204,22 @@ steps to get started:
  6. Optionally, install Quicklisp with the following commands:
 
     ```sh
+    curl -O https://beta.quicklisp.org/quicklisp.lisp
     sbcl --load quicklisp.lisp --eval '(quicklisp-quickstart:install)' --quit
     sbcl --load ~/quicklisp/setup.lisp --eval '(ql:add-to-init-file)' --quit
     ```
 
-    Note that this is an optional step if you are just about to begin
-    learning Common Lisp. However, as you start using Common Lisp for
-    serious software development, sooner or later you are going to need
-    Quicklisp in order to install Common Lisp libraries available on
-    Quicklisp.
+    Quicklisp helps in installing Common Lisp libraries from its
+    repository. You would not need it when you are just learning Common
+    Lisp as a beginner. But as you grow more experienced with Common
+    Lisp and begin developing real world applications, sooner or later,
+    you will need Quicklisp to install libraries that help you solve
+    your problems.
+
+    The first command in the code block fetches `quicklisp.lisp`. The
+    second command installs Quicklisp to `~/quicklisp`. The third
+    command adds some code to SBCL's initialization file at `~/.sbclrc`,
+    so that Quicklisp is automatically loaded when SBCL starts.
 
 Now that your environment is setup, read the next section to learn how
 to use this environment in more detail.
@@ -568,6 +576,59 @@ Note: Not everyone likes Rainbow Delimiters. Some people find
 parentheses in multiple colors distracting. See the [Opinion
 References](#opinion-references) section for more discussion on this
 topic.
+
+
+### Use Quicklisp
+
+This is an optional section for beginners to Common Lisp. Quicklisp
+helps in installing Common Lisp libraries from its repository. You would
+not need it when you are just learning Common Lisp as a beginner. But as
+you grow more experienced with Common Lisp and begin developing real
+world applications, sooner or later, you will need Quicklisp to install
+libraries that help you solve your problems.
+
+Ensure that you have installed Quicklisp as specified in the [Get
+Started](#get-started) section. Then follow these steps to become
+familiar with Quicklisp:
+
+ 1. Start Emacs:
+
+    ```sh
+    emacs
+    ```
+
+ 2. Within Emacs, start SLIME by pressing the following key-sequence:
+
+    ```
+    M-x slime RET
+    ```
+
+ 3. Open a new file, say `server.lisp` with the following key-sequence:
+
+    ```
+    C-x C-f server.lisp
+    ```
+
+ 4. Enter the following code into the buffer for the new file:
+
+    ```lisp
+    (ql:quickload "hunchentoot")
+    (hunchentoot:start (make-instance 'hunchentoot:easy-acceptor :port 4242))
+    ```
+
+    The first line fetches and loads Hunchentoot from Quicklisp.
+    Hunchentoot is a popular Common Lisp web server toolkit for building
+    dynamic websites. The second line uses Hunchentoot to start a web
+    server on listening on TCP port 4242.
+
+ 5. Evaluate the whole buffer with the following key-sequence:
+
+    ```
+    M-x slime-eval-buffer RET
+    ```
+
+ 6. Visit http://127.0.0.1:4242/ with your web browser. A web page with
+    a welcome message from Hunchentoot should appear.
 
 
 Line-by-Line Explanation

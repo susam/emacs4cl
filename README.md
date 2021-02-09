@@ -619,7 +619,7 @@ familiar with Quicklisp:
     The first line fetches and loads Hunchentoot from Quicklisp.
     Hunchentoot is a popular Common Lisp web server toolkit for building
     dynamic websites. The second line uses Hunchentoot to start a web
-    server on listening on TCP port 4242.
+    server listening on TCP port 4242.
 
  5. Evaluate the whole buffer with the following key-sequence:
 

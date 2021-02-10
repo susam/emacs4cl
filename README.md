@@ -133,7 +133,7 @@ steps to get started:
 
     ```sh
     brew install sbcl
-    brew cask install emacs
+    brew install --cask emacs
     ```
 
     On Debian, Ubuntu, or another Debian-based Linux system, enter the

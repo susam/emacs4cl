@@ -173,7 +173,7 @@ steps to get started:
     start Emacs, it will start instantly. We will see how [`.emacs`]
     takes care of it in the line-by-line guide later.
 
- 4. Within Emacs, start SLIME by pressing the following key-sequence:
+ 4. Within Emacs, start SLIME by typing the following key sequence:
 
     ```
     M-x slime RET
@@ -192,7 +192,7 @@ steps to get started:
     <kbd>return</kbd> key.
 
  5. After SLIME REPL starts, enter the following expression at the
-    `CL-USER>` prompt and press <kbd>enter</kbd>.
+    `CL-USER>` prompt and type <kbd>enter</kbd>.
 
     ```lisp
     (format t "hello, world~%")
@@ -264,7 +264,7 @@ executes Common Lisp code. Here are the steps:
     ```
 
  4. An asterisk prompt appears. Enter a Common Lisp expression at the
-    asterisk prompt like this and press <kbd>enter</kbd>:
+    asterisk prompt like this and type <kbd>enter</kbd>:
 
     ```lisp
     (+ 1 2)
@@ -273,13 +273,13 @@ executes Common Lisp code. Here are the steps:
     The result should appear as the output.
 
  5. Similarly, enter the following expression at the SBCL prompt and
-    press <kbd>enter</kbd>:
+    type <kbd>enter</kbd>:
 
     ```lisp
     (format t "hello, world~%")
     ```
 
- 6. Finally, enter the following expression and press <kbd>enter</kbd>
+ 6. Finally, enter the following expression and type <kbd>enter</kbd>
     to exit the SBCL REPL:
 
     ```lisp
@@ -319,18 +319,18 @@ further. Perform the following steps to get started:
     The notation `RET` denotes the <kbd>enter</kbd> or <kbd>return</kbd>
     key.
 
-    Consecutive `C-` key sequences can be optimized by pressing and
-    holding the <kbd>ctrl</kbd> key once at the beginning, pressing the
-    other keys after that, and then releasing the <kbd>ctrl</kbd> key in
-    the end. For example, to type `C-x C-f`, first press and hold
-    <kbd>ctrl</kbd>, then press <kbd>x</kbd>, then press <kbd>f</kbd>,
-    and then release <kbd>ctrl</kbd>. In other words, think of `C-x C-f`
-    as `C-(x f)`. This shortcut works for other modifier keys too.
+    Typing consecutive `C-` key sequences can be optimized by pressing
+    and holding down the <kbd>ctrl</kbd> key, then typing the other
+    keys, and then releasing the <kbd>ctrl</kbd> key. For example, to
+    type `C-x C-f`, first press and hold down <kbd>ctrl</kbd>, then
+    type <kbd>x</kbd>, then type <kbd>f</kbd>, and then release
+    <kbd>ctrl</kbd>. In other words, think of `C-x C-f` as `C-(x f)`.
+    This shortcut works for other modifier keys too.
 
  3. Now type some text into the buffer. Type out at least 3-4 words. We
     will need it for the next two steps.
 
- 4. Move backward by one word with the following command:
+ 4. Move backward by one word with the following key sequence:
 
     ```
     M-b
@@ -378,25 +378,21 @@ further. Perform the following steps to get started:
 
 Now you know how to start Emacs, open a file, save it, and quit. Improve
 your Emacs knowledge further by taking the Emacs tutorial that comes
-along with Emacs. In Emacs, enter the key-sequece `C-h t` to start the
-tutorial.
+along with Emacs. In Emacs, type `C-h t` to start the tutorial.
 
-The key-bindings to perform various operations like creating file,
+The key bindings to perform various operations like creating file,
 saving file, quitting the editor, etc. may look arcane at first, but
-repeated usage of the key-bindings develops muscle memory soon and after
+repeated usage of the key bindings develops muscle memory soon and after
 having used them for a few days, one does not even have to think about
 them. The fingers do what the mind wants effortlessly due to muscle
 memory.
 
-While you are getting used to the Emacs key-bindings, keep this [GNU
+While you are getting used to the Emacs key bindings, keep this [GNU
 Emacs Reference Card][emacs-ref] handy. Also, if you are using it in GUI
 mode, then the menu options can be quite helpful. The menu options
 contain frequently used operations. The option for each operation also
-displays the key-bindings that can be used to invoke the same operation.
-Also, bookmark the [GNU Emacs Manual][emacs-doc] and refer to it when
-you need it.
+displays the key bindings that can be used to invoke the same operation.
 
-[emacs-doc]: https://www.gnu.org/software/emacs/manual/html_node/emacs/index.html
 [emacs-ref]: https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf
 
 
@@ -414,7 +410,7 @@ started with it:
     emacs
     ```
 
- 2. Within Emacs, start SLIME by pressing the following key-sequence:
+ 2. Within Emacs, start SLIME by typing the following key sequence:
 
     ```
     M-x slime RET
@@ -439,7 +435,7 @@ started with it:
     (+ 1 2)
     ```
 
-    The following result should appear when you press <kbd>enter</kbd>:
+    The following result should appear when you type <kbd>enter</kbd>:
 
     ```
     3
@@ -461,7 +457,7 @@ started with it:
     ```
 
  6. While the cursor is placed after the closing parenthesis (not on it,
-    but after it), enter the following command:
+    but after it), type the following command:
 
     ```
     C-x C-e
@@ -528,7 +524,7 @@ following steps to get started with Paredit:
     in fact, a very nifty feature of Paredit. We can enter code with the
     same keystrokes as we would without Paredit.
 
- 5. Now press <code>enter</code> to create a new line just before the
+ 5. Now type <code>enter</code> to create a new line just before the
     last parenthesis. A newline is inserted like this:
 
     ```lisp
@@ -597,13 +593,13 @@ familiar with Quicklisp:
     emacs
     ```
 
- 2. Within Emacs, start SLIME by pressing the following key-sequence:
+ 2. Within Emacs, start SLIME by typing the following key sequence:
 
     ```
     M-x slime RET
     ```
 
- 3. Open a new file, say `server.lisp` with the following key-sequence:
+ 3. Open a new file, say `server.lisp` with the following key sequence:
 
     ```
     C-x C-f server.lisp
@@ -621,7 +617,7 @@ familiar with Quicklisp:
     dynamic websites. The second line uses Hunchentoot to start a web
     server listening on TCP port 4242.
 
- 5. Evaluate the whole buffer with the following key-sequence:
+ 5. Evaluate the whole buffer with the following key sequence:
 
     ```
     M-x slime-eval-buffer RET
@@ -657,7 +653,7 @@ Here is a line-by-line explanation of the UI tweaks in [`.emacs`]:
 
     When Emacs runs in a GUI window, by default, starts with a menu bar,
     tool bar, and scroll bar. Experienced users use Emacs completely
-    through the keyboard via the various key-bindings for various
+    through the keyboard via the various key bindings for various
     operations, so many of them hide these additional bars to make the
     Emacs window look clean and minimal. 
 
@@ -772,10 +768,11 @@ packages we need:
     (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
     ```
 
-    By default only GNU Emacs Lisp Package Archive (ELPA) is in the list of
-    archives to fetch from. The above line adds MELPA too to the list. If you
-    are curious to see what the original value of `package-archives` was and
-    what it is now due to the above line, enter `C-h o package-archives RET`.
+    By default only GNU Emacs Lisp Package Archive (ELPA) is in the list
+    of archives to fetch from. The above line adds MELPA too to the
+    list. If you are curious to see what the original value of
+    `package-archives` was and what it is now due to the above line,
+    type `C-h o package-archives RET`.
 
   - Initialize the package system:
 
@@ -979,10 +976,10 @@ packages from the `dolist` expression of [`.emacs`].
     SLIME REPL. Paredit should automatically insert the corresponding
     `)`.
 
-  - When we press the <kbd>backspace</kbd> key or <kbd>delete</kbd> key
-    to delete a parenthesis in the SLIME REPL, Paredit fails to keep the
-    parentheses balanced because SLIME interferes with Paredit by
-    grabbing the delete key. To fix this issue, use the following code:
+  - When we type <kbd>backspace</kbd> or <kbd>delete</kbd> to delete a
+    parenthesis in the SLIME REPL, Paredit fails to keep the parentheses
+    balanced because SLIME interferes with Paredit by grabbing the
+    delete key. To fix this issue, use the following code:
 
     ```elisp
     (defun override-slime-del-key ()
@@ -996,7 +993,7 @@ packages from the `dolist` expression of [`.emacs`].
     automatically inserted, type them out to advance the cursor to the
     end of the line. When you type `)` even if it is already present,
     Paredit just skips over the already present `)`. Once you are at
-    the end of the line, press <kbd>backspace</kbd> or <kbd>delete</kbd>
+    the end of the line, type <kbd>backspace</kbd> or <kbd>delete</kbd>
     multiple times. Paredit will keep the parentheses balanced at all
     times.
 
@@ -1051,7 +1048,7 @@ packages from the `dolist` expression of [`.emacs`].
     (add-hook 'slime-repl-mode-hook 'rainbow-delimiters-mode)
     ```
 
-    To test this, start SLIME with `M-x slime RET`. Then type `((((`. at
+    To test this, start SLIME with `M-x slime RET`. Then type `((((` at
     the REPL prompt. Rainbow Delimiters should color each parenthesis
     differently.
 

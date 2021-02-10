@@ -205,8 +205,8 @@ steps to get started:
 
     ```sh
     curl -O https://beta.quicklisp.org/quicklisp.lisp
-    sbcl --load quicklisp.lisp --eval '(quicklisp-quickstart:install)' --quit
-    sbcl --load ~/quicklisp/setup.lisp --eval '(ql:add-to-init-file)' --quit
+    sbcl --load quicklisp.lisp --eval "(quicklisp-quickstart:install)" --quit
+    sbcl --load ~/quicklisp/setup.lisp --eval "(ql:add-to-init-file)" --quit
     ```
 
     Quicklisp helps in installing Common Lisp libraries from its

@@ -151,7 +151,7 @@ steps to get started:
     home directory. Here is an example `curl` command to do so:
 
     ```sh
-    curl https://raw.githubusercontent.com/susam/emacs4cl/master/.emacs >> ~/.emacs
+    curl -L https://github.com/susam/emacs4cl/raw/master/.emacs >> ~/.emacs
     ```
 
  3. Start Emacs:

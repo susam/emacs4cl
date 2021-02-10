@@ -762,21 +762,29 @@ packages we need:
     use in the next point.
 
     ```elisp
-    (package-initialize)
+    (require 'package)
     ```
 
-  - Add Milkypostman’s Emacs Lisp Package Archive (MELPA) to the list of
+  - Add Milkypostman's Emacs Lisp Package Archive (MELPA) to the list of
     archives to fetch packages from:
 
     ```elisp
     (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
     ```
 
-    By default only Emacs Lisp Package Archive (ELPA) is in the list of
-    archives to fetch from. The above line adds MELPA too to the list.
-    If you are curious to see what the original value of
-    `package-archives` was and what it is now due to the above line,
-    enter `C-h o package-archives RET`.
+    By default only GNU Emacs Lisp Package Archive (ELPA) is in the list of
+    archives to fetch from. The above line adds MELPA too to the list. If you
+    are curious to see what the original value of `package-archives` was and
+    what it is now due to the above line, enter `C-h o package-archives RET`.
+
+  - Initialize the package system:
+
+    ```elisp
+    (package-initialize)
+    ```
+
+    While initializing the package system, this call also initializes
+    the `package-archive-contents` variable used in the next point.
 
   - Download package descriptions from package archives only if they
     have not been downloaded before:
@@ -791,10 +799,10 @@ packages we need:
     `~/.emacs.d/elpa/archives` directory for archive contents in case
     you are curious. If the archive contents have not been fetched then
     the second line fetches them. Thus the second line executes only
-    when the Emacs initialization is loaded for the first time. Thus,
-    the first time Emacs starts with the [.emacs](.emacs) file of this
-    repository, it takes a while to fetch the package archives. However, 
-    once the packages archived have been fetched and Emacs is started
+    when the Emacs initialization is loaded for the first time. The
+    first time Emacs starts with the [.emacs](.emacs) file of this
+    repository, it takes a while to fetch the package archives. However,
+    once the package archives have been fetched and Emacs is started
     again later, it starts instantly because the code above takes care
     not to fetch package archives again when it is already cached
     locally.

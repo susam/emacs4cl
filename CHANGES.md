@@ -1,3 +1,12 @@
+0.2.0 (UNRELEASED)
+------------------
+
+### Fixed
+
+- Set `package-archives` before calling `package-initialize` to fix
+  installation of new packages from MELPA after restarting Emacs.
+
+
 0.1.0 (2020-12-16)
 ------------------
 

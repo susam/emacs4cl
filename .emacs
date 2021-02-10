@@ -1,4 +1,4 @@
-;;; Emacs4CL 0.1.0 <https://git.io/emacs4cl>
+;;; Emacs4CL 0.2.0-dev <https://github.com/susam/emacs4cl>
 
 ;; Customize user interface.
 (menu-bar-mode 0)
@@ -17,8 +17,9 @@
   (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3"))
 
 ;; Enable installation of packages from MELPA.
-(package-initialize)
+(require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(package-initialize)
 (unless package-archive-contents
   (package-refresh-contents))
 

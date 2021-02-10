@@ -28,7 +28,7 @@ like:
 [screenshot]: https://i.imgur.com/OUFvQdh.png
 
 If you are already comfortable with Emacs and only want to understand
-what is in the [`.emacs`] file, you can skip ahead directly to the
+the content of the [`.emacs`] file, you can skip ahead directly to the
 [Line-by-Line Explanation](#line-by-line-explanation) section that
 describes every line of this Emacs initialization file in detail.
 
@@ -64,8 +64,8 @@ Who Is This For?
 ----------------
 
 Are you an absolute beginner to Emacs? Are you so new to Emacs that you
-don't even have `~/.emacs` or `~/.emacs.d` on your file system? Have you
-considered learning Common Lisp but when you picked up a book like
+do not even have `~/.emacs` or `~/.emacs.d` on your file system? Have
+you considered learning Common Lisp but when you picked up a book like
 [Practical Common Lisp][pcl], you learnt that it recommends Emacs and
 SLIME for development environment and it seemed like a significant
 additional learning curve for you? If you answered "yes" to most of
@@ -184,7 +184,7 @@ steps to get started:
     the <kbd>alt</kbd> key or the <kbd>option</kbd> key as a modifier
     key or <kbd>esc</kbd> as a prefix key to enter `M-`.
 
-    For example `M-x` is going to be <kbd>alt</kbd> + <kbd>x</kbd> or
+    For example, `M-x` is going to be <kbd>alt</kbd> + <kbd>x</kbd> or
     <kbd>option</kbd> + <kbd>x</kbd> or <kbd>esc</kbd> <kbd>x</kbd> on a
     modern keyboard.
 
@@ -210,11 +210,11 @@ steps to get started:
     ```
 
     Quicklisp helps in installing Common Lisp libraries from its
-    repository. You would not need it when you are just learning Common
-    Lisp as a beginner. But as you grow more experienced with Common
-    Lisp and begin developing real world applications, sooner or later,
-    you will need Quicklisp to install libraries that help you solve
-    your problems.
+    repository. You do not need it when you have just begun learning
+    Common Lisp. But as you grow more experienced with Common Lisp and
+    begin developing real world applications, sooner or later, you will
+    need Quicklisp to install libraries that help you solve your
+    problems.
 
     The first command in the code block fetches `quicklisp.lisp`. The
     second command installs Quicklisp to `~/quicklisp`. The third
@@ -345,7 +345,7 @@ further. Perform the following steps to get started:
     <kbd>option</kbd> key, read [Emacs Wiki: Meta Key
     Problems](https://www.emacswiki.org/emacs/MetaKeyProblems).
 
- 5. Now move forward by one word with the following:
+ 5. Now move forward by one word with the following key sequence:
 
     ```
     M-f
@@ -1031,7 +1031,7 @@ packages from the `dolist` expression of [`.emacs`].
     ```
 
     To test this, open a new Common Lisp source file, say, `foo.lisp`.
-    Then type `((((`. Rainbow Delimiters should color each parenthsis
+    Then type `((((`. Rainbow Delimiters should color each parenthesis
     differently.
 
   - Enable Rainbow Delimiters in Lisp interaction mode:
@@ -1051,9 +1051,9 @@ packages from the `dolist` expression of [`.emacs`].
     (add-hook 'slime-repl-mode-hook 'rainbow-delimiters-mode)
     ```
 
-    To test this, start SLIME with `M-x slime RET`. Then type `(` in
-    SLIME REPL. Rainbow Delimiters should automatically insert the corresponding
-    `)`.
+    To test this, start SLIME with `M-x slime RET`. Then type `((((`. at
+    the REPL prompt. Rainbow Delimiters should color each parenthesis
+    differently.
 
 You may have noticed that we did not enable Rainbow Delimiters for
 eval-expression. That is because it does not work as expected as of

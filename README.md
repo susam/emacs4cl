@@ -1010,8 +1010,8 @@ packages from the `dolist` expression of [`.emacs`].
     `((((`. Rainbow Delimiters should color each parenthesis
     differently.
 
-  - Enable Rainbow Delimiters while interactively evaluating Emacs Lisp expressions
-    in inferior-emacs-lisp-mode (IELM):
+  - Enable Rainbow Delimiters while interactively evaluating Emacs Lisp
+    expressions in inferior-emacs-lisp-mode (IELM):
 
     ```elisp
     (add-hook 'ielm-mode-hook 'rainbow-delimiters-mode)

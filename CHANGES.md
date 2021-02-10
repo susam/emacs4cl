@@ -1,6 +1,11 @@
 0.2.0 (UNRELEASED)
 ------------------
 
+### Added
+
+- Use spaces, not tabs, for indentation.
+
+
 ### Fixed
 
 - Set `package-archives` before calling `package-initialize` to fix

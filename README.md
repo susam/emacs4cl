@@ -50,6 +50,7 @@ Contents
   * [Use Quicklisp](#use-quicklisp)
 * [Line-by-Line Explanation](#line-by-line-explanation)
   * [Tweak UI](#tweak-ui)
+  * [Use Spaces for Indentation](#use-spaces-for-indentation)
   * [Highlight Parentheses](#highlight-parentheses)
   * [Install Packages](#install-packages)
   * [Inferior Lisp Program](#inferior-lisp-program)
@@ -699,17 +700,68 @@ Here is a line-by-line explanation of the UI tweaks in [`.emacs`]:
     (load-theme 'wombat)
     ```
 
-    If you want to check the other built-in themes, enter
+    If you want to check the other built-in themes, type
     `M-x customize-themes RET`. A new window with a buffer named
     `*Custom Themes*` appear. In this buffer, select any theme you want
     to test. After you are done testing, you can close this new window
     with `C-x 0`.
 
 
+### Use Spaces for Indentation
+
+The following point shows how to configure Emacs to insert spaces, not
+tabs, for indenting code.
+
+  - Use spaces, not tabs, for indentation:
+
+    ```elisp
+    ;; Use spaces, not tabs, for indentation.
+    (setq-default indent-tabs-mode nil)
+    ```
+
+    Emacs uses a mix of tabs and spaces by default for indentation. To
+    verify the default behaviour, first comment out the above line of
+    Emacs Lisp code, save it, then restart Emacs, then open a new Common
+    Lisp source file, say, `C-x C-f foo.lisp RET` and type the following
+    three lines of Common Lisp code:
+
+    ```lisp
+    (defun hello-loop ()
+      (loop repeat 5
+            do (format t "hello~%")))
+    ```
+
+    While typing the above code, do not type <kbd>tab</kbd> or
+    <kbd>space</kbd> to indent the second and third lines. When you type
+    <kbd>enter</kbd> at the end of each line, Emacs automatically
+    inserts the necessary tabs and spaces to indent the code. After
+    entering this code, type `M-x whitespace-mode RET` to visualize
+    whitespace characters. This mode displays each space with a middle
+    dot (`·`) and each tab with a right pointing guillemet (`»`). With
+    whitespace mode enabled, you should find that the second line of
+    code is indented with two spaces but the third line is indented with
+    a single tab. Emacs has a `tab-width` variable that is set to 8 by
+    default. For every `tab-width` columns of indentation, Emacs inserts
+    a tab to indent the code. That is why, the third line has one tab
+    character for indentation.
+
+    Now to verify that the above line of Emacs Lisp code works as
+    expected, uncomment it again to enable that line, save it, then
+    restart Emacs, and then perform the above experiment involving the
+    three lines of Common Lisp code again. This time, you should see
+    that no tabs are used for indentation. Only spaces are used for
+    indentation.
+
+Mixing tabs and spaces for indenting source code can be problematic,
+especially, when another programmer views the file with an editor with a
+different tab width setting. See [Tabs Are
+Evil](https://www.emacswiki.org/emacs/TabsAreEvil) for more details on
+this topic.
+
+
 ### Highlight Parentheses
 
-This following points describe how we enable highlighting of
-parentheses:
+The following points describe how we enable highlighting of parentheses:
 
   - The next point shows how to enable highlighting of matching pair of
     parentheses. By default, there is a small delay between the movement

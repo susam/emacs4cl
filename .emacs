@@ -8,6 +8,9 @@
 (setq inhibit-startup-screen t)
 (load-theme 'wombat)
 
+;; Use spaces, not tabs, for indentation.
+(setq-default indent-tabs-mode nil)
+
 ;; Highlight matching pairs of parentheses.
 (setq show-paren-delay 0)
 (show-paren-mode)

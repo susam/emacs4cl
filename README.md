@@ -56,9 +56,8 @@ Contents
   * [Inferior Lisp Program](#inferior-lisp-program)
   * [Add Hooks](#add-hooks)
 * [Opinion References](#opinion-references)
-* [Forums](#forums)
+* [Channels](#channels)
 * [License](#license)
-* [Support](#support)
 
 
 Who Is This For?
@@ -1126,22 +1125,22 @@ Opinion References
 [rainbow-noise]: https://lobste.rs/s/vgjknq/emacs_begin_learning_common_lisp#c_1n78vl
 
 
-Forums
-------
+Channels
+--------
 
-The following community forums are available for asking questions and
-seeking help regarding this project:
+The following channels are available for asking questions, seeking
+help and receiving updates regarding this project:
 
-- Reddit: [r/spxy](https://www.reddit.com/r/spxy/)
-- Matrix: [#spxy:matrix.org](https://app.element.io/#/room/#spxy:matrix.org)
-- Freenode: [#spxy](https://webchat.freenode.net/#spxy)
+- Twitter: [@susam](https://twitter.com/susam)
+- Matrix: [#susam:matrix.org](https://matrix.to/#/#susam:matrix.org)
+- Freenode: [#susam](https://webchat.freenode.net/#susam)
+- Reddit: [r/susam](https://reddit.com/r/susam)
+- GitHub: [emacs4cl/issues](http://github.com/susam/emacs4cl/issues)
 
-Although these community forums are focussed on mathematics and computer
-science, many members of these forums are very experienced in both Emacs
-and Common Lisp.
-
-Also, please feel free to [connect with me on Twitter][Twitter URL] and
-share your feedback, questions, and ideas with me.
+You are welcome to follow or subscribe to one or more of these channels
+to receive updates and ask questions about this project. The Freenode and
+Matrix channels are bridged together, so if you join one of them, you
+will automatically receive the updates from the other one too.
 
 
 License
@@ -1155,10 +1154,3 @@ This software is provided "AS IS", WITHOUT WARRANTY OF ANY KIND,
 express or implied. See [LICENSE.md][L] for details.
 
 [L]: LICENSE.md
-
-
-Support
--------
-
-To report bugs, suggest improvements, or ask questions, please create a
-new issue at <http://github.com/susam/emacs4cl/issues>.

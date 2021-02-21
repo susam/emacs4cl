@@ -1154,3 +1154,24 @@ This software is provided "AS IS", WITHOUT WARRANTY OF ANY KIND,
 express or implied. See [LICENSE.md][L] for details.
 
 [L]: LICENSE.md
+
+<!--
+Release Checklist
+-----------------
+
+  - Update version number in .emacs.
+  - Update year in LICENSE.md.
+  - Update CHANGES.md.
+  - Commit changes.
+
+        git add -p
+        git commit
+
+  - Tag the release.
+
+        VER=
+
+        git commit -em "Set version to $VER"
+        git tag $VER -m "Emacs4CL $VER"
+        git push origin master $VER
+-->

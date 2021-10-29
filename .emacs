@@ -1,4 +1,4 @@
-;;; Emacs4CL 0.2.0 <https://github.com/susam/emacs4cl>
+;;; Emacs4CL 0.3.0 <https://github.com/susam/emacs4cl>
 
 ;; Customize user interface.
 (menu-bar-mode 0)
@@ -56,3 +56,15 @@
 (add-hook 'lisp-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'lisp-interaction-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'slime-repl-mode-hook 'rainbow-delimiters-mode)
+
+;; Customize colors for Rainbow Delimiters.
+(require 'rainbow-delimiters)
+(set-face-foreground 'rainbow-delimiters-depth-1-face "#f99")  ; red
+(set-face-foreground 'rainbow-delimiters-depth-2-face "#9f9")  ; green
+(set-face-foreground 'rainbow-delimiters-depth-3-face "#9cf")  ; blue
+(set-face-foreground 'rainbow-delimiters-depth-4-face "#ff9")  ; yellow
+(set-face-foreground 'rainbow-delimiters-depth-5-face "#9ff")  ; cyan
+(set-face-foreground 'rainbow-delimiters-depth-6-face "#f9f")  ; magenta
+(set-face-foreground 'rainbow-delimiters-depth-7-face "#fff")  ; white
+(set-face-foreground 'rainbow-delimiters-depth-8-face "#ccc")  ; light gray
+(set-face-foreground 'rainbow-delimiters-depth-9-face "#999")  ; dark gray

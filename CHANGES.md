@@ -1,4 +1,12 @@
-0.2.0 (2020-02-21)
+0.3.0 (2021-10-29)
+------------------
+
+### Added
+
+- Customize Rainbow Delimiters colors to show colorful parentheses.
+
+
+0.2.0 (2021-02-21)
 ------------------
 
 ### Added

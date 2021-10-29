@@ -25,7 +25,7 @@ like:
 
 [![Screenshot of Emacs][screenshot]][screenshot]
 
-[screenshot]: https://i.imgur.com/OUFvQdh.png
+[screenshot]: https://i.imgur.com/3BttNWM.png
 
 If you are already comfortable with Emacs and only want to understand
 the content of the [`.emacs`] file, you can skip ahead directly to the
@@ -55,6 +55,7 @@ Contents
   * [Install Packages](#install-packages)
   * [Inferior Lisp Program](#inferior-lisp-program)
   * [Add Hooks](#add-hooks)
+  * [Colorful Parentheses](#colorful-parentheses)
 * [Opinion References](#opinion-references)
 * [Channels](#channels)
 * [License](#license)
@@ -1109,6 +1110,36 @@ Dec 2020. See https://github.com/Fanael/rainbow-delimiters/issues/57 for
 more details.
 
 
+### Colorful Parentheses
+
+The default colors that Rainbow Delimiters chooses for the nested
+parentheses are too subtle to easily recognize the matching pair of
+parentheses. Some Lisp programmers like to customize the colors to
+make the parentheses look more colorful. This section shows one way to
+do this.
+
+  - This is necessary to use the various Rainbow Delimiters faces that
+    appear in the next point.
+
+    ```elisp
+    (require 'rainbow-delimiters)
+    ```
+
+  - Set different colors for parentheses at different nesting level.
+
+    ```elisp
+    (set-face-foreground 'rainbow-delimiters-depth-1-face "#f99")  ; red
+    (set-face-foreground 'rainbow-delimiters-depth-2-face "#9f9")  ; green
+    (set-face-foreground 'rainbow-delimiters-depth-3-face "#9cf")  ; blue
+    (set-face-foreground 'rainbow-delimiters-depth-4-face "#ff9")  ; yellow
+    (set-face-foreground 'rainbow-delimiters-depth-5-face "#9ff")  ; cyan
+    (set-face-foreground 'rainbow-delimiters-depth-6-face "#f9f")  ; magenta
+    (set-face-foreground 'rainbow-delimiters-depth-7-face "#fff")  ; white
+    (set-face-foreground 'rainbow-delimiters-depth-8-face "#ccc")  ; light gray
+    (set-face-foreground 'rainbow-delimiters-depth-9-face "#999")  ; dark gray
+    ```
+
+
 Opinion References
 ------------------
 
@@ -1160,6 +1191,7 @@ Release Checklist
   - Update version number in .emacs.
   - Update year in LICENSE.md.
   - Update CHANGES.md.
+  - Add new screenshot (120x32) if necessary.
   - Commit changes.
 
         git add -p

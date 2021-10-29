@@ -655,7 +655,7 @@ Here is a line-by-line explanation of the UI tweaks in [`.emacs`]:
     tool bar, and scroll bar. Experienced users use Emacs completely
     through the keyboard via the various key bindings for various
     operations, so many of them hide these additional bars to make the
-    Emacs window look clean and minimal. 
+    Emacs window look clean and minimal.
 
     If you are a beginner to Emacs, you might find the menu bar helpful
     initially, so you might not want this line in your Emacs
@@ -1133,14 +1133,11 @@ help and receiving updates regarding this project:
 
 - Twitter: [@susam](https://twitter.com/susam)
 - Matrix: [#susam:matrix.org](https://matrix.to/#/#susam:matrix.org)
-- Freenode: [#susam](https://webchat.freenode.net/#susam)
-- Reddit: [r/susam](https://reddit.com/r/susam)
+- Libera: [#susam](https://web.libera.chat/#offbeat)
 - GitHub: [emacs4cl/issues](http://github.com/susam/emacs4cl/issues)
 
 You are welcome to follow or subscribe to one or more of these channels
-to receive updates and ask questions about this project. The Freenode and
-Matrix channels are bridged together, so if you join one of them, you
-will automatically receive the updates from the other one too.
+to receive updates and ask questions about this project.
 
 
 License
@@ -1154,6 +1151,7 @@ This software is provided "AS IS", WITHOUT WARRANTY OF ANY KIND,
 express or implied. See [LICENSE.md][L] for details.
 
 [L]: LICENSE.md
+
 
 <!--
 Release Checklist

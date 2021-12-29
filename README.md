@@ -152,7 +152,7 @@ steps to get started:
     home directory. Here is an example `curl` command to do so:
 
     ```sh
-    curl -L https://github.com/susam/emacs4cl/raw/master/.emacs >> ~/.emacs
+    curl -L https://github.com/susam/emacs4cl/raw/main/.emacs >> ~/.emacs
     ```
 
  3. Start Emacs:
@@ -1199,5 +1199,5 @@ Release Checklist
 
         git commit -em "Set version to $VER"
         git tag $VER -m "Emacs4CL $VER"
-        git push origin master $VER
+        git push origin main $VER
 -->

@@ -57,6 +57,7 @@ Contents
   * [Add Hooks](#add-hooks)
   * [Colorful Parentheses](#colorful-parentheses)
 * [Opinion References](#opinion-references)
+* [More Emacs Customization](#more-emacs-customization)
 * [Channels](#channels)
 * [License](#license)
 
@@ -1150,6 +1151,18 @@ Opinion References
 [paredit-chance]: https://stackoverflow.com/a/5243421/303363
 [paredit-never-warmed]: https://lobste.rs/s/vgjknq/emacs_begin_learning_common_lisp#c_0y6zpd
 [rainbow-noise]: https://lobste.rs/s/vgjknq/emacs_begin_learning_common_lisp#c_1n78vl
+
+
+More Emacs Customization
+------------------------
+
+This project focusses primarily on setting up a Common Lisp
+development environment. If you want to enhance your Emacs setup from
+being a Common Lisp development environment to being a more general
+purpose editing and programming environment, please see my new project
+[Emfy](https://github.com/susam/emfy). Emfy is similar to this
+project, however, Emfy offers a lot more customization to make Emacs
+easier to use for general purpose editing and programming.
 
 
 Channels

@@ -303,7 +303,7 @@ further. Perform the following steps to get started:
     ```
 
  2. Within Emacs, enter the following command to open a file, say,
-    `~/hello.txt`:
+    `hello.txt`:
 
     ```
     C-x C-f hello.txt RET
@@ -652,11 +652,11 @@ Here is a line-by-line explanation of the UI tweaks in [`.emacs`]:
     (menu-bar-mode 0)
     ```
 
-    When Emacs runs in a GUI window, by default, starts with a menu bar,
-    tool bar, and scroll bar. Experienced users use Emacs completely
-    through the keyboard via the various key bindings for various
-    operations, so many of them hide these additional bars to make the
-    Emacs window look clean and minimal.
+    When Emacs runs in a GUI window, by default, it starts with a menu
+    bar, tool bar, and scroll bar. Experienced users use Emacs
+    completely through the keyboard via the various key bindings for
+    various operations, so many of them hide these additional bars to
+    make the Emacs window look clean and minimal.
 
     If you are a beginner to Emacs, you might find the menu bar helpful
     initially, so you might not want this line in your Emacs
@@ -715,7 +715,6 @@ tabs, for indenting code.
   - Use spaces, not tabs, for indentation:
 
     ```elisp
-    ;; Use spaces, not tabs, for indentation.
     (setq-default indent-tabs-mode nil)
     ```
 
@@ -732,18 +731,18 @@ tabs, for indenting code.
     ```
 
     While typing the above code, do not type <kbd>tab</kbd> or
-    <kbd>space</kbd> to indent the second and third lines. When you type
-    <kbd>enter</kbd> at the end of each line, Emacs automatically
+    <kbd>space</kbd> to indent the second and third lines. When you
+    type <kbd>enter</kbd> at the end of each line, Emacs automatically
     inserts the necessary tabs and spaces to indent the code. After
     entering this code, type `M-x whitespace-mode RET` to visualize
     whitespace characters. This mode displays each space with a middle
     dot (`·`) and each tab with a right pointing guillemet (`»`). With
     whitespace mode enabled, you should find that the second line of
-    code is indented with two spaces but the third line is indented with
-    a single tab. Emacs has a `tab-width` variable that is set to 8 by
-    default. For every `tab-width` columns of indentation, Emacs inserts
-    a tab to indent the code. That is why, the third line has one tab
-    character for indentation.
+    code is indented with two spaces but the third line is indented
+    with a single tab. Emacs has a `tab-width` variable that is set to
+    `8` by default. For every `tab-width` columns of indentation,
+    Emacs inserts a tab to indent the code. That is why, the third
+    line has one tab character for indentation.
 
     Now to verify that the above line of Emacs Lisp code works as
     expected, uncomment it again to enable that line, save it, then
@@ -844,17 +843,16 @@ packages we need:
     ```
 
     The first line checks whether package descriptions from package
-    archives from archives have been fetched. See the
-    `~/.emacs.d/elpa/archives` directory for archive contents in case
-    you are curious. If the archive contents have not been fetched then
-    the second line fetches them. Thus the second line executes only
-    when the Emacs initialization is loaded for the first time. The
-    first time Emacs starts with the [.emacs](.emacs) file of this
-    repository, it takes a while to fetch the package archives. However,
-    once the package archives have been fetched and Emacs is started
-    again later, it starts instantly because the code above takes care
-    not to fetch package archives again when it is already cached
-    locally.
+    archives have been fetched. See the `~/.emacs.d/elpa/archives`
+    directory for archive contents in case you are curious. If the
+    archive contents have not been fetched then the second line
+    fetches them. Thus the second line executes only when the Emacs
+    initialization is loaded for the first time. The first time Emacs
+    starts with the [.emacs](.emacs) file of this repository, it takes
+    a while to fetch the package archives. However, once the package
+    archives have been fetched and Emacs is started again later, it
+    starts instantly because the code above takes care not to fetch
+    package archives again when it is already cached locally.
 
   - When we install packages using `package-install` (coming up in the
     next point), a few customizations are written automatically into the
@@ -951,11 +949,11 @@ variable so that Emacs can use SBCL to load and execute SLIME:
 This section describes how to enable Paredit and Rainbow Delimiters.
 These are not absolutely essential for having an interactive programming
 environment for Common Lisp. However many programmers find them useful
-while some do not find them useful.
+while some do not.
 
-In case you decide not to use either Paredit or Rainbow, then you may
-skip this section. In that case, you might also want to remove these
-packages from the `dolist` expression of [`.emacs`].
+In case you decide not to use either Paredit or Rainbow Delimiters,
+then you may skip this section. In that case, you might also want to
+remove these packages from the `dolist` expression of [`.emacs`].
 
   - Enable Paredit while editing Emacs Lisp code:
 
@@ -995,16 +993,6 @@ packages from the `dolist` expression of [`.emacs`].
     appears, type `(`. Paredit should automatically insert the
     corresponding `)`.
 
-  - Enable Paredit while editing Common Lisp code:
-
-    ```elisp
-    (add-hook 'lisp-mode-hook 'enable-paredit-mode)
-    ```
-
-    To test this, open a new Common Lisp source file, say, `C-x C-f
-    foo.lisp RET`. Then type `(`. Paredit should automatically insert
-    the corresponding `)`.
-
   - Enable Paredit in Lisp interaction mode:
 
     ```elisp
@@ -1017,6 +1005,16 @@ packages from the `dolist` expression of [`.emacs`].
     start Lisp interaction mode with the command `M-x
     lisp-interaction-mode RET`. Type `(` again. Paredit should now
     automatically insert the corresponding `)`.
+
+  - Enable Paredit while editing Common Lisp code:
+
+    ```elisp
+    (add-hook 'lisp-mode-hook 'enable-paredit-mode)
+    ```
+
+    To test this, open a new Common Lisp source file, say, `C-x C-f
+    foo.lisp RET`. Then type `(`. Paredit should automatically insert
+    the corresponding `)`.
 
   - Enable Paredit in SLIME REPL:
 
@@ -1056,11 +1054,9 @@ packages from the `dolist` expression of [`.emacs`].
     ```
 
     Rainbow Delimiters color nested parentheses with different colors
-    according to the depth level of each parenthesis.
-
-    To test this open a new Emacs Lisp file, say, `foo.el`. Then type
-    `((((`. Rainbow Delimiters should color each parenthesis
-    differently.
+    according to the depth level of each parenthesis. To test this
+    open a new Emacs Lisp file, say, `foo.el`. Then type `((((`.
+    Rainbow Delimiters should color each parenthesis differently.
 
   - Enable Rainbow Delimiters while interactively evaluating Emacs Lisp
     expressions in inferior-emacs-lisp-mode (IELM):
@@ -1112,11 +1108,11 @@ more details.
 
 ### Colorful Parentheses
 
-The default colors that Rainbow Delimiters chooses for the nested
-parentheses are too subtle to easily recognize the matching pair of
-parentheses. Some Lisp programmers like to customize the colors to
-make the parentheses look more colorful. This section shows one way to
-do this.
+The default colors that the Rainbow Delimiters package chooses for the
+nested parentheses are too subtle to easily recognize the matching
+pair of parentheses. Some Lisp programmers like to customize the
+colors to make the parentheses look more colorful. This section shows
+one way to do this.
 
   - This is necessary to use the various Rainbow Delimiters faces that
     appear in the next point.
@@ -1162,10 +1158,10 @@ Channels
 The following channels are available for asking questions, seeking
 help and receiving updates regarding this project:
 
+- GitHub: [emacs4cl/issues](http://github.com/susam/emacs4cl/issues)
 - Twitter: [@susam](https://twitter.com/susam)
 - Matrix: [#susam:matrix.org](https://matrix.to/#/#susam:matrix.org)
-- Libera: [#susam](https://web.libera.chat/#offbeat)
-- GitHub: [emacs4cl/issues](http://github.com/susam/emacs4cl/issues)
+- Libera: [#susam](https://web.libera.chat/#susam)
 
 You are welcome to follow or subscribe to one or more of these channels
 to receive updates and ask questions about this project.

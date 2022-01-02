@@ -149,12 +149,38 @@ steps to get started:
     http://www.sbcl.org/platform-table.html and
     https://www.gnu.org/software/emacs/ respectively.
 
- 2. Copy the Emacs initialization file [`.emacs`] provided here to your
-    home directory. Here is an example `curl` command to do so:
+ 2. Copy the Emacs initialization file [`.emacs`] provided here to
+    your home directory. Here is an example `curl` command that copies
+    the initialization file to its traditional location:
 
     ```sh
     curl -L https://github.com/susam/emacs4cl/raw/main/.emacs >> ~/.emacs
     ```
+
+    Here is another alternative that copies the initialization file to
+    a more convenient location:
+
+    ```sh
+    mkdir ~/.emacs.d
+    curl -L https://github.com/susam/emacs4cl/raw/main/.emacs >> ~/.emacs.d/init.el
+    ```
+
+    Yet another popular alternative is to copy the initialization file
+    to an XDG-compatible location as follows:
+
+    ```sh
+    mkdir -p ~/.config/emacs
+    curl -L https://github.com/susam/emacs4cl/raw/main/.emacs >> ~/.config/emacs/init.el
+    ```
+
+    Emacs can automatically load the Emacs initialization file from
+    any of the paths used above. See section [The Emacs Initialization
+    File][emacs-init-doc] of the Emacs manual for more details about
+    this. Most users these days prefer one of the last two locations
+    because it allows all Emacs configuration to conveniently remain
+    in one directory.
+
+    [emacs-init-doc]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Init-File.html
 
  3. Start Emacs:
 
@@ -390,10 +416,11 @@ them. The fingers do what the mind wants effortlessly due to muscle
 memory.
 
 While you are getting used to the Emacs key bindings, keep this [GNU
-Emacs Reference Card][emacs-ref] handy. Also, if you are using it in GUI
-mode, then the menu options can be quite helpful. The menu options
-contain frequently used operations. The option for each operation also
-displays the key bindings that can be used to invoke the same operation.
+Emacs Reference Card][emacs-ref] handy. Also, if you are using it in
+GUI mode, then the menu options can be quite helpful. The Emacs
+initialization file that comes with this project hides the menu bar by
+default but you can always invoke the menu bar any time by typing
+`<f10>`.
 
 [emacs-ref]: https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf
 

@@ -25,7 +25,7 @@ like:
 
 [![Screenshot of Emacs][screenshot]][screenshot]
 
-[screenshot]: https://i.imgur.com/3BttNWM.png
+[screenshot]: https://i.imgur.com/9LoZzHz.png
 
 If you are already comfortable with Emacs and only want to understand
 the content of the [`.emacs`] file, you can skip ahead directly to the

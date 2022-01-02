@@ -681,16 +681,20 @@ Here is a line-by-line explanation of the UI tweaks in [`.emacs`]:
     ```
 
     When Emacs runs in a GUI window, by default, it starts with a menu
-    bar, tool bar, and scroll bar. Experienced users use Emacs
-    completely through the keyboard via the various key bindings for
-    various operations, so many of them hide these additional bars to
-    make the Emacs window look clean and minimal.
+    bar, tool bar, and scroll bar. Many (but not all) users like to
+    hide them in order to make the Emacs frame look clean and minimal.
+    Note that in Emacs, the term *frame* refers to the GUI window or
+    the region of the desktop where Emacs is displayed. In Emacs, the
+    term *window* refers to what we usually call split panes these
+    days.
 
-    If you are a beginner to Emacs, you might find the menu bar helpful
-    initially, so you might not want this line in your Emacs
-    initialization file. In that case, remove this line or just comment
-    it out by inserting a semicolon (i.e., `;`) before the opening
-    parentheses.
+    Many users find the menu bar helpful because it helps in
+    discovering new features. Even with the menu bar hidden with the
+    above line of Emacs Lisp code, the menu can be accessed anytime
+    easily by typing `<f10>`. If you really want the menu bar to be
+    visible at all times, remove the above line of Emacs Lisp code or
+    just comment it out by inserting a semicolon (i.e., `;`) before
+    the opening parentheses.
 
   - Hide the tool bar and scroll bar:
 
@@ -831,9 +835,9 @@ The following points describe how we enable highlighting of parentheses:
 
 ### Install Packages
 
-This section is essential to Common Lisp programming with Emacs. The
-following points describe how we automate the installation of Emacs
-packages we need:
+The following points describe how we automate the installation of
+Emacs packages we need. These points are essential to Common Lisp
+programming with Emacs:
 
   - The following code disables TLS 1.3 to work around a known bug in
     GNU Emacs versions 26.1 and 26.2:

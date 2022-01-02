@@ -1,3 +1,17 @@
+0.4.0 (UNRELEASED)
+------------------
+
+### Changed
+
+- Increase contrast of color theme by choosing a darker shade of gray.
+- Choose darker shades of colors for rainbow delimiters.
+
+
+### Fixed
+
+- Load custom-file.
+
+
 0.3.0 (2021-10-29)
 ------------------
 

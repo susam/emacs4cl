@@ -65,11 +65,11 @@ Contents
 Who Is This For?
 ----------------
 
-Are you an absolute beginner to Emacs? Are you so new to Emacs that you
-do not even have `~/.emacs` or `~/.emacs.d` on your file system? Have
-you considered learning Common Lisp but when you picked up a book like
-[Practical Common Lisp][pcl], you learnt that it recommends Emacs and
-SLIME for development environment and it seemed like a significant
+Are you an absolute beginner to Emacs? Are you so new to Emacs that
+you do not even have `~/.emacs` or `~/.emacs.d` on your file system?
+Have you considered learning Common Lisp but when you picked up a book
+like [Practical Common Lisp][pcl], you learnt that it recommends Emacs
+and SLIME for development environment and it seemed like a significant
 additional learning curve for you? If you answered "yes" to most of
 these questions, then this project is for you.
 
@@ -294,8 +294,8 @@ executes Common Lisp code. Here are the steps:
 Emacs is a very powerful and extensible editor. It comes with over
 10,000 built-in commands. A small section like this can barely scratch
 the surface of Emacs. Yet, this section makes a modest attempt at
-getting you started with Emacs and then provides more resources to learn
-further. Perform the following steps to get started:
+getting you started with Emacs and then provides more resources to
+learn further. Perform the following steps to get started:
 
  1. Start Emacs:
 
@@ -567,8 +567,8 @@ more discussion on this topic.
 There is not much to learn about using Rainbow Delimiters. In the
 previous sections, you must have seen that as you type nested
 parentheses, each parenthesis is highlighted with a different color.
-That is done by Rainbow Delimiters. It colors each parenthesis according
-to its nesting depth level.
+That is done by Rainbow Delimiters. It colors each parenthesis
+according to its nesting depth level.
 
 Note: Not everyone likes Rainbow Delimiters. Some people find
 parentheses in multiple colors distracting. See the [Opinion
@@ -706,6 +706,22 @@ Here is a line-by-line explanation of the UI tweaks in [`.emacs`]:
     `*Custom Themes*` appear. In this buffer, select any theme you want
     to test. After you are done testing, you can close this new window
     with `C-x 0`.
+
+  - Choose a darker shade of gray for the background color to improve
+    the contrast of the theme:
+
+    ```elisp
+    (set-face-background 'default "#111")
+    ```
+
+    Although Wombat is a pretty nice theme that comes with Emacs, in
+    this theme, the cursor, search matches, and comments can often be
+    difficult to spot because they are all colored with different
+    shades of gray while the background is also gray. The above line
+    of Emacs Lisp code chooses a darker shade of gray for the
+    background in order to improve the contrast and make the other
+    elements that are colored with a lighter shade of gray easier to
+    spot.
 
 
 ### Use Spaces for Indentation

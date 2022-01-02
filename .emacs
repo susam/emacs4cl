@@ -1,4 +1,4 @@
-;;; Emacs4CL 0.3.0 <https://github.com/susam/emacs4cl>
+;;; Emacs4CL 0.4.0-dev <https://github.com/susam/emacs4cl>
 
 ;; Customize user interface.
 (menu-bar-mode 0)
@@ -6,7 +6,10 @@
   (tool-bar-mode 0)
   (scroll-bar-mode 0))
 (setq inhibit-startup-screen t)
+
+;; Dark theme.
 (load-theme 'wombat)
+(set-face-background 'default "#111")
 
 ;; Use spaces, not tabs, for indentation.
 (setq-default indent-tabs-mode nil)

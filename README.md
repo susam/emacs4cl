@@ -822,6 +822,45 @@ packages we need:
     because this code checks whether the Emacs version is less than 26.3
     before applying the workaround.
 
+  - When we install packages using `package-install` (coming up soon
+    in a later point), a few customizations are written automatically
+    into the Emacs initialization file (`~/.emacs` in our case). This
+    has the rather undesirable effect of our carefully handcrafted
+    `~/.emacs` being meddled by `package-install`. To be precise, it
+    is the `custom` package invoked by `package-install` that intrudes
+    into our Emacs initialization file. To prevent that, we ask
+    `custom` to write the customizations to a separate file with the
+    following code:
+
+    ```elisp
+    (setq custom-file (concat user-emacs-directory "custom.el"))
+    ```
+
+    Note that this line of code must occur before the
+    `package-install` call.
+
+  - Emacs does not load the custom-file automatically, so we add the
+    following code to load it:
+
+    ```elisp
+    (load custom-file t)
+    ```
+
+    It is important to load the custom-file because it may contain
+    customizations we have written to it directly or via the customize
+    interface (say, using `M-x customize RET`). If we don't load this
+    file, then any customizations written to this file will not become
+    available in our Emacs environment.
+
+    The boolean argument `t` ensures that no error occurs when the
+    custom-file is missing. Without it, when Emacs starts for the
+    first time with our initialization file and there is no
+    custom-file yet, the following error occurs: `File is missing:
+    Cannot open load file, No such file or directory,
+    ~/.emacs.d/custom.el`. Setting the second argument to `t` prevents
+    this error when Emacs is run with our initialization file for the
+    first time.
+
   - This is necessary for defining the `package-archives` list we will
     use in the next point.
 
@@ -860,30 +899,17 @@ packages we need:
     ```
 
     The first line checks whether package descriptions from package
-    archives have been fetched. See the `~/.emacs.d/elpa/archives`
-    directory for archive contents in case you are curious. If the
-    archive contents have not been fetched then the second line
-    fetches them. Thus the second line executes only when the Emacs
-    initialization is loaded for the first time. The first time Emacs
-    starts with the [.emacs](.emacs) file of this repository, it takes
-    a while to fetch the package archives. However, once the package
-    archives have been fetched and Emacs is started again later, it
-    starts instantly because the code above takes care not to fetch
-    package archives again when it is already cached locally.
-
-  - When we install packages using `package-install` (coming up in the
-    next point), a few customizations are written automatically into the
-    Emacs initialization file (`~/.emacs` in our case). This has the
-    rather undesirable effect of our carefully handcrafted `~/.emacs`
-    being meddled by `package-install`. To be precise, it is the
-    `custom` package invoked by `package-install` that intrudes into our
-    Emacs initialization file. To prevent that, we ask `custom` to write
-    the customizations to a separate file at `~/.emacs.d/custom.el` with
-    the following code:
-
-    ```elisp
-    (setq custom-file (concat user-emacs-directory "custom.el"))
-    ```
+    archives have been fetched. See the `~/.emacs.d/elpa/archives` or
+    `~/.config/emacs/elpa/archives` directory for archive contents in
+    case you are curious. If the archive contents have not been
+    fetched then the second line fetches them. Thus the second line
+    executes only when the Emacs initialization is loaded for the
+    first time. The first time Emacs starts with the [.emacs](.emacs)
+    file of this repository, it takes a while to fetch the package
+    archives. However, once the package archives have been fetched and
+    Emacs is started again later, it starts instantly because the code
+    above takes care not to fetch package archives again when it is
+    already cached locally.
 
   - Install SLIME, Paredit, and Rainbow Delimiters only if they are not
     installed already:
@@ -896,16 +922,17 @@ packages we need:
 
     This loops iterates over each package name in a list of packages.
     For each package, it checks whether the package is installed with
-    the `package-installed-p` function. If it is not installed, then it
-    is installed with the `package-install` function. You can modify the
-    list of packages in the first line to add other packages that you
-    might need in future or remove packages that you do not want.
+    the `package-installed-p` function. If it is not installed, then
+    it is installed with the `package-install` function. You can
+    modify the list of packages in the first line to add other
+    packages that you might need in future or remove packages that you
+    do not want.
 
-    The first time Emacs starts with this initialization file, it takes
-    a while to install the packages we need. However, once the packages
-    are installed and Emacs is started again later, it starts instantly
-    because the code above takes care to not attempt installing packages
-    that are already installed.
+    The first time Emacs starts with this initialization file, it
+    takes a while to install the packages we need. However, once the
+    packages are installed and Emacs is started again later, it starts
+    instantly because the code above takes care to not attempt
+    installing packages that are already installed.
 
 
 ### Inferior Lisp Program

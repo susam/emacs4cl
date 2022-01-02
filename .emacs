@@ -22,15 +22,16 @@
 (when (and (version< emacs-version "26.3") (>= libgnutls-version 30603))
   (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3"))
 
+;; Write customizations to a separate file instead of this file.
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(load custom-file t)
+
 ;; Enable installation of packages from MELPA.
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 (unless package-archive-contents
   (package-refresh-contents))
-
-;; Write customizations to ~/.emacs.d/custom.el instead of this file.
-(setq custom-file (concat user-emacs-directory "custom.el"))
 
 ;; Install packages.
 (dolist (package '(slime paredit rainbow-delimiters))

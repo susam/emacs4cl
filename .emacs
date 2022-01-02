@@ -56,18 +56,18 @@
 ;; Enable Rainbow Delimiters.
 (add-hook 'emacs-lisp-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'ielm-mode-hook 'rainbow-delimiters-mode)
-(add-hook 'lisp-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'lisp-interaction-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'lisp-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'slime-repl-mode-hook 'rainbow-delimiters-mode)
 
-;; Customize colors for Rainbow Delimiters.
+;; Customize Rainbow Delimiters.
 (require 'rainbow-delimiters)
-(set-face-foreground 'rainbow-delimiters-depth-1-face "#f99")  ; red
-(set-face-foreground 'rainbow-delimiters-depth-2-face "#9f9")  ; green
-(set-face-foreground 'rainbow-delimiters-depth-3-face "#9cf")  ; blue
-(set-face-foreground 'rainbow-delimiters-depth-4-face "#ff9")  ; yellow
-(set-face-foreground 'rainbow-delimiters-depth-5-face "#9ff")  ; cyan
-(set-face-foreground 'rainbow-delimiters-depth-6-face "#f9f")  ; magenta
-(set-face-foreground 'rainbow-delimiters-depth-7-face "#fff")  ; white
-(set-face-foreground 'rainbow-delimiters-depth-8-face "#ccc")  ; light gray
-(set-face-foreground 'rainbow-delimiters-depth-9-face "#999")  ; dark gray
+(set-face-foreground 'rainbow-delimiters-depth-1-face "#c66")  ; red
+(set-face-foreground 'rainbow-delimiters-depth-2-face "#6c6")  ; green
+(set-face-foreground 'rainbow-delimiters-depth-3-face "#69f")  ; blue
+(set-face-foreground 'rainbow-delimiters-depth-4-face "#cc6")  ; yellow
+(set-face-foreground 'rainbow-delimiters-depth-5-face "#6cc")  ; cyan
+(set-face-foreground 'rainbow-delimiters-depth-6-face "#c6c")  ; magenta
+(set-face-foreground 'rainbow-delimiters-depth-7-face "#ccc")  ; light gray
+(set-face-foreground 'rainbow-delimiters-depth-8-face "#999")  ; medium gray
+(set-face-foreground 'rainbow-delimiters-depth-9-face "#666")  ; dark gray

@@ -766,16 +766,16 @@ tabs, for indenting code.
     (setq-default indent-tabs-mode nil)
     ```
 
-    Emacs uses a mix of tabs and spaces by default for indentation. To
-    verify the default behaviour, first comment out the above line of
-    Emacs Lisp code, save it, then restart Emacs, then open a new Common
-    Lisp source file, say, `C-x C-f foo.lisp RET` and type the following
-    three lines of Common Lisp code:
+    Emacs uses a mix of tabs and spaces by default for indentation and
+    alignment. To verify the default behaviour, first comment out the
+    above line of Emacs Lisp code, save it, then restart Emacs, then
+    open a new Common Lisp source file, say, `C-x C-f foo.lisp RET`
+    and type the following three lines of Common Lisp code:
 
     ```lisp
-    (defun hello-loop ()
-      (loop repeat 5
-            do (format t "hello~%")))
+    (defun foo ()
+      (concat "foo"
+              "bar"))
     ```
 
     While typing the above code, do not type <kbd>tab</kbd> or
@@ -787,23 +787,38 @@ tabs, for indenting code.
     dot (`·`) and each tab with a right pointing guillemet (`»`). With
     whitespace mode enabled, you should find that the second line of
     code is indented with two spaces but the third line is indented
-    with a single tab. Emacs has a `tab-width` variable that is set to
-    `8` by default. For every `tab-width` columns of indentation,
-    Emacs inserts a tab to indent the code. That is why, the third
-    line has one tab character for indentation.
+    with a single tab followed by two spaces. Emacs has a `tab-width`
+    variable that is set to `8` by default. For every `tab-width`
+    columns of indentation, Emacs inserts a tab to indent the code.
+    The third line requires 10 leading spaces for alignment, so Emacs
+    inserts one tab character followed by 2 spaces to make the third
+    line look aligned. However, this code would look misaligned on
+    another editor with a different `tab-width` setting. That's why we
+    configure Emacs to use only spaces to indent and align code.
 
     Now to verify that the above line of Emacs Lisp code works as
-    expected, uncomment it again to enable that line, save it, then
-    restart Emacs, and then perform the above experiment involving the
-    three lines of Common Lisp code again. This time, you should see
-    that no tabs are used for indentation. Only spaces are used for
-    indentation.
+    expected, uncomment the function call to set `indent-tabs-mode` to
+    `nil`, save it, then restart Emacs, and then perform the
+    above experiment involving the three lines of Emacs Lisp code
+    again. This time, you should see that no tabs are used for
+    indentation. Only spaces are used for indentation.
 
-Mixing tabs and spaces for indenting source code can be problematic,
-especially, when another programmer views the file with an editor with a
-different tab width setting. See [Tabs Are
-Evil](https://www.emacswiki.org/emacs/TabsAreEvil) for more details on
-this topic.
+    In some type of files, we must use literal tabs. For example, in
+    `Makefile`, the syntax of target rules require that the commands
+    under a target are indented by a literal tab character. In such
+    files, Emacs is smart enough to always use literal tabs for
+    indentation regardless of the above variable setting.
+
+    Mixing tabs and spaces for indenting source code can be
+    problematic, especially, when the author of code or Emacs
+    inadvertently uses tabs for alignment (as opposed to using tabs
+    for indentation only which would be fine) and another programmer
+    views the file with an editor with a different tab width setting.
+    In fact, in the experiment above, Emacs did use a literal tab
+    character to align code which would cause the code to look
+    misaligned on another editor with a different tab width setting.
+    See [Tabs Are Evil](https://www.emacswiki.org/emacs/TabsAreEvil)
+    for more details on this topic.
 
 
 ### Highlight Parentheses

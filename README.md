@@ -39,7 +39,6 @@ Contents
 --------
 
 * [Who Is This For?](#who-is-this-for)
-* [What About Portacle?](#what-about-portacle)
 * [Get Started](#get-started)
 * [Step-by-Step Usage](#step-by-step-usage)
   * [Use SBCL](#use-sbcl)
@@ -57,6 +56,7 @@ Contents
   * [Add Hooks](#add-hooks)
   * [Colorful Parentheses](#colorful-parentheses)
 * [More Emacs Customization](#more-emacs-customization)
+* [Alternatives](#alternatives)
 * [Opinion References](#opinion-references)
 * [Channels](#channels)
 * [License](#license)
@@ -80,45 +80,6 @@ explains the content of [`.emacs`] file in a line-by-line manner.
 
 [pcl]: http://www.gigamonkeys.com/book/
 [clc]: https://lispcookbook.github.io/cl-cookbook/
-
-
-What About Portacle?
---------------------
-
-Portacle is fine. It is an often recommended Common Lisp development
-environment for beginners. It provides an Emacs-based fully featured
-integrated development environment for Common Lisp. Portacle consists of
-Emacs customized heavily with custom configuration and a rich selection
-of packages and tools that make it suitable for Common Lisp programming.
-However, some of the customizations done by Portacle look odd to an
-experienced Emacs user:
-
-  - A default `*scratch*` buffer with more than 10 lines of comments
-    that consume some valuable screen real-estate.
-
-  - Enabling line numbers in all buffers including the SLIME
-    Read-Eval-Print Loop (REPL) buffer. Enabling line numbers in Emacs
-    is considered to be an antipattern by some experienced Emacs users.
-    See the [Opinion References](#opinion-references) section for more
-    details on this.
-
-More importantly, installing Portacle hides away the underlying details
-of what goes into making Emacs ready for Common Lisp development.
-Programmers who like to set up their tools from scratch may find that
-Portacle does not offer the opportunity to do so because it bundles all
-useful tools already.
-
-Also, Portacle is still Emacs. To use Portacle effectively, you have to
-learn Emacs and SLIME anyway. If you are going to learn Emacs and SLIME
-anyway, you might as well set it up yourself. Then you can add only
-those customizations to Emacs that you need instead of Portacle deciding
-what your Emacs experience should be like.
-
-This project provides a good middle ground between setting up Emacs from
-scratch manually and installing Portacle. It promotes a do-it-yourself
-approach to setting up Emacs for Common Lisp programming. More
-importantly, it helps you understand each step of the work that goes
-into customizing Emacs as an environment for Common Lisp programming.
 
 
 Get Started
@@ -1220,6 +1181,43 @@ purpose editing and programming environment, please see my new project
 [Emfy](https://github.com/susam/emfy). Emfy is similar to this
 project, however, Emfy offers more customization to make Emacs easier
 to use for general purpose editing and programming.
+
+
+Alternatives
+------------
+
+There are two popular alternatives to Emacs4CL:
+
+- [Portacle](https://portacle.github.io/): Portacle is an Emacs-based
+  fully featured integrated development environment (IDE) for Common
+  Lisp. Portacle consists of Emacs customized heavily with custom
+  configuration and a rich selection of packages and tools that make
+  it suitable for Common Lisp programming.
+- [Lem](https://lem-project.github.io/lem-page/): Lem is an Emacs-like
+  editor and Common Lisp IDE written from scratch using Common Lisp
+  itself.
+
+Both are good alternatives to Emacs4CL. Since Lem is a completely
+different editor, there is not much to compare between Lem and
+Emacs4CL. Lem offers an appealing option for those who prefer to
+engage in Common Lisp development activities using an editor that is
+written in Common Lisp itself.
+
+Portacle, however, is Emacs packaged with custom packages,
+configuration, and Common Lisp tools. Portacle tucks away the
+underlying details of what goes into making Emacs ready for Common
+Lisp development in its rather large configuration directory. Since
+Portacle is still Emacs, to use Portacle effectively, you have to
+learn Emacs and SLIME anyway. If you are going to learn Emacs and
+SLIME anyway, you might as well set it up yourself. Then you can add
+only those customizations to Emacs that you need instead of Portacle
+deciding what your Emacs experience should be like.
+
+Emacs4CL provides a good middle ground between setting up Emacs from
+scratch manually and installing Portacle. It promotes a do-it-yourself
+approach to setting up Emacs for Common Lisp programming. More
+importantly, it helps you understand each step of the work that goes
+into customizing Emacs as an environment for Common Lisp programming.
 
 
 Opinion References

@@ -1109,6 +1109,7 @@ remove these packages from the `dolist` expression of [`.emacs`].
     delete key. To fix this issue, use the following code:
 
     ```elisp
+    (require 'paredit)
     (defun override-slime-del-key ()
       (define-key slime-repl-mode-map
         (read-kbd-macro paredit-backward-delete-key) nil))

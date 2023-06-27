@@ -25,7 +25,7 @@ like:
 
 [![Screenshot of Emacs][screenshot]][screenshot]
 
-[screenshot]: https://i.imgur.com/9LoZzHz.png
+[screenshot]: https://susam.github.io/blob/img/emacs4cl/emacs4cl-0.5.0.png
 
 If you are already comfortable with Emacs and only want to understand
 the content of the [`.emacs`] file, you can skip ahead directly to the
@@ -416,11 +416,7 @@ them. The fingers do what the mind wants effortlessly due to muscle
 memory.
 
 While you are getting used to the Emacs key bindings, keep this [GNU
-Emacs Reference Card][emacs-ref] handy. Also, if you are using it in
-GUI mode, then the menu options can be quite helpful. The Emacs
-initialization file that comes with this project hides the menu bar by
-default but you can always invoke the menu bar any time by typing
-`<f10>`.
+Emacs Reference Card][emacs-ref] handy.
 
 [emacs-ref]: https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf
 

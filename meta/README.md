@@ -7,7 +7,12 @@ Release Checklist
   - Update version number in .emacs.
   - Update year in LICENSE.md.
   - Update CHANGES.md.
-  - Add new screenshot (120x32) if necessary.
+  - Add new screenshot if necessary.
+
+    ```
+    make demo
+    ```
+
   - Commit changes.
 
     ```

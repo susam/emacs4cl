@@ -8,13 +8,13 @@ programming.
 
 [![View Source][Source SVG]][Source URL]
 [![MIT License][License SVG]][L]
-[![Twitter][Twitter SVG]][Twitter URL]
+[![Mastodon][Mastodon SVG]][Mastodon URL]
 
 [Source SVG]: https://img.shields.io/badge/view-~%2f.emacs-brightgreen
 [Source URL]: .emacs
 [License SVG]: https://img.shields.io/badge/license-MIT-%233ea639
-[Twitter SVG]: https://img.shields.io/badge/twitter-%40susam-%231da1f2
-[Twitter URL]: https://twitter.com/susam
+[Mastodon SVG]: https://img.shields.io/badge/mastodon-%40susam-%2355f
+[Mastodon URL]: https://mastodon.social/@susam
 
 This repository provides a good middle ground between configuring Emacs
 manually by installing SLIME, Paredit, etc. yourself with `M-x
@@ -547,11 +547,11 @@ following steps to get started with Paredit:
                      -
     ```
 
-    Of course, there was no need to type the closing parenthesis because
-    it was already present but typing it out to skip over it is more
-    efficient than then moving over it with movement commands. This is,
-    in fact, a very nifty feature of Paredit. We can enter code with the
-    same keystrokes as we would without Paredit.
+    Of course, there was no need to type the closing parenthesis
+    because it was already present but typing it out to skip over it
+    is more efficient than moving over it with movement commands. This
+    is, in fact, a very nifty feature of Paredit. We can enter code
+    with the same keystrokes as we would without Paredit.
 
  5. Now type <code>enter</code> to create a new line just before the
     last parenthesis. A newline is inserted like this:
@@ -674,29 +674,11 @@ actual Common Lisp related customization begins in the next section:
 
 Here is a line-by-line explanation of the UI tweaks in [`.emacs`]:
 
-  - Hide the menu bar:
-
-    ```elisp
-    (menu-bar-mode 0)
-    ```
-
-    When Emacs runs in a GUI window, by default, it starts with a menu
+  - When Emacs runs in a GUI window, by default, it starts with a menu
     bar, tool bar, and scroll bar. Many (but not all) users like to
     hide them in order to make the Emacs frame look clean and minimal.
-    Note that in Emacs, the term *frame* refers to the GUI window or
-    the region of the desktop where Emacs is displayed. In Emacs, the
-    term *window* refers to what we usually call split panes these
-    days.
-
-    Many users find the menu bar helpful because it helps in
-    discovering new features. Even with the menu bar hidden with the
-    above line of Emacs Lisp code, the menu can be accessed anytime
-    easily by typing `<f10>`. If you really want the menu bar to be
-    visible at all times, remove the above line of Emacs Lisp code or
-    just comment it out by inserting a semicolon (i.e., `;`) before
-    the opening parentheses.
-
-  - Hide the tool bar and scroll bar:
+    The following lines disable the tool bar and scroll bar. The menu
+    bar is left enabled.
 
     ```elisp
     (when (display-graphic-p)
@@ -709,11 +691,16 @@ Here is a line-by-line explanation of the UI tweaks in [`.emacs`]:
     `when` expression, we get the following error on Emacs without
     graphic display support: `Symbol's function definition is void:
     tool-bar-mode`. An example of Emacs without graphics support is
-    `emacs-nox` on Debian 10.
+    `emacs-nox` on Debian 10. Note that this is only an author's
+    preference. You may comment out one or more of these lines if you
+    want to retain the tool bar or scroll bar.
 
-    Note that this is only an author's preference. You may comment out
-    one or more of these lines if you want to retain the tool bar or
-    scroll bar.
+    Some users like to hide the menu bar as well. To disable the menu
+    bar, include `(menu-bar-mode 0)` as top-level-expression (i.e.,
+    outside the `when` expression) in the initialization file. Even
+    with the menu bar disabled, the menu can be accessed anytime by
+    typing `<f10>`. For beginners to Emacs, it is advisable to keep
+    the menu bar enabled because it helps in discovering new features.
 
   - Inhibit the startup screen with the `Welcome to GNU Emacs` message
     from appearing:
@@ -1261,7 +1248,7 @@ The following channels are available for asking questions, seeking
 help and receiving updates regarding this project:
 
 - GitHub: [emacs4cl/issues](http://github.com/susam/emacs4cl/issues)
-- Twitter: [@susam](https://twitter.com/susam)
+- Mastodon: [@susam@mastodon.social](https://mastodon.social/@susam)
 - Matrix: [#susam:matrix.org](https://matrix.to/#/#susam:matrix.org)
 - Libera: [#susam](https://web.libera.chat/#susam)
 

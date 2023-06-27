@@ -1,7 +1,6 @@
-;;; Emacs4CL 0.4.0 <https://github.com/susam/emacs4cl>
+;;; Emacs4CL 0.5.0.dev <https://github.com/susam/emacs4cl>
 
 ;; Customize user interface.
-(menu-bar-mode 0)
 (when (display-graphic-p)
   (tool-bar-mode 0)
   (scroll-bar-mode 0))

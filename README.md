@@ -1193,9 +1193,8 @@ There are two popular alternatives to Emacs4CL:
   Lisp. Portacle consists of Emacs customized heavily with custom
   configuration and a rich selection of packages and tools that make
   it suitable for Common Lisp programming.
-- [Lem](https://lem-project.github.io/lem-page/): Lem is an Emacs-like
-  editor and Common Lisp IDE written from scratch using Common Lisp
-  itself.
+- [Lem](https://lem-project.github.io/): Lem is an Emacs-like editor
+  and Common Lisp IDE written from scratch using Common Lisp itself.
 
 Both are good alternatives to Emacs4CL. Since Lem is a completely
 different editor, there is not much to compare between Lem and
